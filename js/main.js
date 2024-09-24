@@ -15,9 +15,9 @@
 
   var offcanvasMenu = function () {
     $("#page").prepend('<div id="gtco-offcanvas" />');
-    $("#page").prepend(
-      '<a href="#" class="js-gtco-nav-toggle gtco-nav-toggle gtco-nav-white"><i></i></a>',
-    );
+    // $("#page").prepend(
+    //   '<a href="#" class="js-gtco-nav-toggle gtco-nav-toggle gtco-nav-white"><i></i></a>',
+    // );
     var clone1 = $(".menu-1 > ul").clone();
     $("#gtco-offcanvas").append(clone1);
     var clone2 = $(".menu-2 > ul").clone();
@@ -244,12 +244,20 @@
     counterWayPoint();
   });
 })();
+
 $(window).scroll(function () {
   var containerHeight = $(".gtco-cover").outerHeight();
-  if ($(window).scrollTop() > containerHeight) {
+  var scrollTop = $(window).scrollTop();
+
+  if (scrollTop > containerHeight) {
     $(".gtco-nav").attr("id", "fixed-header");
-    $(".header-btn").attr("class", "header-btn-show");
+    $(".header-btn").addClass("header-btn-show");
   } else {
-    $(".gtco-nav").removeAttr("id");
+    $(".gtco-nav").removeAttr("id", "fixed-header");
+    $(".header-btn").removeClass("header-btn-show");
   }
 });
+
+function changeImage(src) {
+  document.getElementById("mainImage").src = src;
+}

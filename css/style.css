@@ -104,19 +104,35 @@ input
 .gtco-container {
     position: relative;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    text-align: center;
+}
+@media (min-width: 576px) {
+    .container {
+        max-width:540px
+    }
 }
 
-@media (min-width: 1200px) {
+@media screen and (max-width: 768px) {
     .gtco-container {
-        max-width: 1140px;
+        padding: 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width:720px
     }
 }
 
 @media (min-width: 992px) {
     .gtco-container {
         max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .gtco-container {
+        max-width: 1140px;
     }
 }
 
@@ -142,6 +158,7 @@ input
     padding: 0;
     text-transform: uppercase;
     font-weight: bold;
+    text-align: left;
 }
 .gtco-nav a {
     padding: 5px 10px;
@@ -243,7 +260,7 @@ input
     color: #fff;
 }
 .gtco-nav ul li.btn-cta a {
-    color: #e57851;
+    color: #fff;
 }
 .gtco-nav ul li.btn-cta a span {
     background: #fff;
@@ -283,7 +300,6 @@ input
 }
 
 .gtco-bg {
-    background-image: url(../images/Boltix-Decking-Board-Video-Cover.JPG);
     background-position: center center;
     background-attachment: fixed;
     transform: translateZ(0);
@@ -293,13 +309,17 @@ input
 }
 
 .gtco-video,
-.gtco-image {
-    height: 450px;
+.gtco-image, {
+    width: 100%;
     overflow: hidden;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     -ms-border-radius: 7px;
     border-radius: 7px;
+}
+.gtco-video.gtco-bg {
+    background-image: url(../images/Boltix-Decking-Board-Video-Cover.JPG);
+    height: 450px;
 }
 .gtco-video a {
     z-index: 1001;
@@ -351,7 +371,7 @@ input
 }
 
 .gtco-cover {
-    height: 900px;
+    height: 950px;
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -374,12 +394,12 @@ input
 }
 @media screen and (max-width: 768px) {
     .gtco-cover {
-        height: 600px;
+        height: 1000px;
     }
 }
 .gtco-cover .display-t,
 .gtco-cover .display-tc {
-    height: 900px;
+    height: 770px;
     display: table;
     width: 100%;
 }
@@ -387,6 +407,7 @@ input
     .gtco-cover .display-t,
     .gtco-cover .display-tc {
         height: 600px;
+        padding-top: 30px;
     }
 }
 .gtco-cover.gtco-cover-sm {
@@ -419,7 +440,7 @@ input
 @media screen and (max-width: 768px) {
     #gtco-counter {
         height: inherit;
-        padding: 7em 0;
+        padding: 2em 0;
     }
     #gtco-counter .display-t,
     #gtco-counter .display-tc {
@@ -470,7 +491,7 @@ input
     display: -moz-inline-stack;
     display: inline-block;
     zoom: 1;
-    *display: inline;
+    display: inline;
     color: #e57851;
     padding-left: 10px;
     padding-right: 10px;
@@ -484,8 +505,8 @@ input
     margin: 0;
 }
 .gtco-contact-info ul li {
-    padding: 0 0 0 50px;
-    margin: 0 0 30px 0;
+    padding: 0 0 0 30px;
+    margin: 0 30px 30px 0;
     list-style: none;
     position: relative;
 }
@@ -493,7 +514,7 @@ input
     color: #e57851;
     position: absolute;
     left: 0;
-    top: 0.05em;
+    top: 0.2em;
     font-family: "icomoon";
     speak: none;
     font-style: normal;
@@ -506,19 +527,19 @@ input
     -moz-osx-font-smoothing: grayscale;
 }
 .gtco-contact-info ul li.address:before {
-    font-size: 30px;
+    font-size: 20px;
     content: "\e9d1";
 }
 .gtco-contact-info ul li.phone:before {
-    font-size: 23px;
+    font-size: 20px;
     content: "\e9f4";
 }
 .gtco-contact-info ul li.email:before {
-    font-size: 23px;
+    font-size: 20px;
     content: "\e9da";
 }
 .gtco-contact-info ul li.url:before {
-    font-size: 23px;
+    font-size: 20px;
     content: "\e9af";
 }
 
@@ -565,12 +586,13 @@ form label {
 }
 #gtco-header .display-tc .btn,
 #gtco-counter .display-tc .btn,
-.gtco-cover .display-tc .btn {
-    padding: 15px 30px;
+.gtco-cover .display-tc .btn,
+.btn.header-btn-show{
+    padding: 13px 25px;
     background: #e57851 !important;
     color: #fff;
     border: none !important;
-    font-size: 18px;
+    font-size: 16px;
 }
 #gtco-header .display-tc .btn:hover,
 #gtco-counter .display-tc .btn:hover,
@@ -586,7 +608,7 @@ form label {
     text-align: center;
 }
 #gtco-counter .counter {
-    font-size: 50px;
+    font-size: 30px;
     margin-bottom: 10px;
     color: #fff;
     display: block;
@@ -602,8 +624,8 @@ form label {
     }
 }
 #gtco-counter .icon {
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     text-align: center;
     -webkit-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75);
@@ -611,7 +633,7 @@ form label {
     margin-bottom: 0;
 }
 #gtco-counter .icon i {
-    height: 30px;
+    height: 20px;
     opacity: 80%;
 }
 #gtco-counter .icon i:before {
@@ -620,18 +642,26 @@ form label {
 }
 
 #gtco-features,
+#gtco-features-1,
 #gtco-features-2,
 #gtco-testimonial,
+#gtco-comparison,
 #gtco-services,
 #gtco-footer,
 .gtco-section {
     padding: 7em 0;
     clear: both;
 }
+
+#gtco-features {
+    background: #efefef;
+}
 @media screen and (max-width: 768px) {
     #gtco-features,
+    #gtco-features-1,
     #gtco-features-2,
     #gtco-testimonial,
+    #gtco-comparison,
     #gtco-services,
     #gtco-footer,
     .gtco-section {
@@ -640,7 +670,6 @@ form label {
 }
 
 #gtco-features-2 {
-    background: #efefef;
     position: relative;
     float: left;
     width: 100%;
@@ -648,11 +677,13 @@ form label {
 
 .feature-center {
     text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    float: left;
-    width: 100%;
-    margin-bottom: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+        float: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 }
 @media screen and (max-width: 768px) {
     .feature-center {
@@ -675,9 +706,9 @@ form label {
     display: table-cell;
     vertical-align: middle;
     height: 90px;
-    font-size: 25px;
-    line-height: 40px;
-    color: #e57851;
+    font-size: 12px;
+    line-height: 15px;
+    color: #E91E63;
 }
 .feature-center p,
 .feature-center h3 {
@@ -693,21 +724,24 @@ form label {
     color: #5d5d5d;
 }
 
-.feature-left {
-    float: left;
-    width: 100%;
-    margin-bottom: 30px;
-    position: relative;
+@media screen and (min-width: 768px) {
+    .feature-left {
+        float: left;
+        width: 100%;
+        margin-bottom: 30px;
+        position: relative;
+    }
 }
+
 .feature-left:last-child {
     margin-bottom: 0;
 }
 .feature-left .icon {
     float: left;
     margin-right: 5%;
-    width: 54px;
-    height: 54px;
-    background: #fff;
+    width: 20px;
+    height: 20px;
+    background: #e57851;
     display: table;
     text-align: center;
     -webkit-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75);
@@ -726,8 +760,8 @@ form label {
 .feature-left .icon i {
     display: table-cell;
     vertical-align: middle;
-    font-size: 30px;
-    color: #e57851;
+    font-size: 16px;
+    color: #fff;
 }
 .feature-left .feature-copy {
     float: left;
@@ -735,8 +769,8 @@ form label {
 }
 @media screen and (max-width: 768px) {
     .feature-left .feature-copy {
-        width: 70%;
-        float: left;
+        width: 100%;
+        float: none;
     }
 }
 .feature-left .feature-copy h3 {
@@ -758,6 +792,11 @@ form label {
     line-height: 1.5;
     font-weight: bold;
     color: #000;
+}
+@media screen and (max-width: 768px) {
+    .gtco-heading h2 {
+        font-size: 28px
+    }
 }
 .gtco-heading p {
     font-size: 18px;
@@ -814,6 +853,7 @@ form label {
     font-size: 32px;
     color: #dadada;
 }
+
 #gtco-testimonial .arrow-thumb a:hover,
 #gtco-testimonial .arrow-thumb a:focus,
 #gtco-testimonial .arrow-thumb a:active {
@@ -836,13 +876,14 @@ form label {
     float: left;
     margin: 0;
     padding: 0;
-    width: 25%;
+    width: 20%;
     text-align: center;
     list-style: none;
     display: -moz-inline-stack;
     display: inline-block;
     zoom: 1;
-    *display: inline;
+    display: inline;
+    height: 80px;
 }
 .gtco-tabs .gtco-tab-nav li .icon {
     font-size: 30px;
@@ -851,19 +892,23 @@ form label {
     padding: 20px;
     width: 100%;
     float: left;
+    font-size: 14px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     border-radius: 4px;
-    color: #b3b3b3;
+    color: #676161;
 }
 .gtco-tabs .gtco-tab-nav li a:hover {
     color: #4d4d4d;
 }
-.gtco-tabs .gtco-tab-nav li.active a {
+.gtco-tabs .gtco-tab-nav li.active {
     background: #fff;
+}
+.gtco-tabs .gtco-tab-nav li.active a {
     color: #e57851;
 }
+
 .gtco-tabs .gtco-tab-content-wrap {
     clear: both;
     position: relative;
@@ -914,6 +959,12 @@ form label {
 #gtco-started ul {
     display: inline-flex;
 }
+@media screen and (max-width: 768px) {
+    #gtco-started ul {
+        flex-direction: column;
+    }
+}
+
 #gtco-started .form-control {
     background: rgba(255, 255, 255, 0.2);
     border: none !important;
@@ -1478,16 +1529,16 @@ form label {
 }
 .main-screen-text {
     color: #fff;
-    margin: 40px auto;
+    margin: 35px auto;
     font-size: 18px;
     line-height: 150%;
 }
 
 .top-img {
     position: absolute;
-    top: 120px;
+    top: 100px;
     left: 50px;
-    width: 90%;
+    width: 420px;
     height: auto;
     z-index: 10;
     border-radius: 10px;
@@ -1495,9 +1546,9 @@ form label {
 
 .bottom-img {
     position: absolute;
-    top: 40%;
-    left: 0;
-    width: 500px;
+    top: 45%;
+    left: 10px;
+    width: 450px;
     filter: brightness(80%);
     border-radius: 10px;
 }
@@ -1507,9 +1558,16 @@ form label {
     top: 0;
     left: 0;
     right: 0;
-    height: 60px; /* Adjust based on your header height */
+    height: 80px; /* Adjust based on your header height */
     background-color: #fff;
-    padding-top: 10px;
+    padding-top: 22px;
+    box-shadow: 4px 4px 18px rgba(137, 141, 154, .3);
+}
+@media screen and (max-width: 768px) {
+
+    #fixed-header {
+        padding-top: 8px;
+    }
 }
 .header-btn {
     display: none;
@@ -1527,7 +1585,6 @@ form label {
 .feature-data-container {
     display: inline-flex;
     align-items: center;
-    margin-top: 30px;
 }
 
 .feature-data-container .unit {
@@ -1536,21 +1593,124 @@ form label {
     padding-left: 10px;
 }
 
+.icon-container {
+    display: inline-flex;
+    align-items: center;
+}
+
 .counter-label {
-    margin-top: 10px;
-    font-size: 15px;
+    margin-left: 10px;
+    padding: 0;
+    font-size: 12px;
     text-transform: uppercase;
     display: block;
     opacity: 70%;
+    font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", arial,
+            sans-serif;
 }
 
 .comparison-chart {
     width: 100%;
     height: auto;
     margin-bottom: 50px;
+    box-shadow: 4px 4px 18px rgba(137,141,154,.3);
 }
 .product-image {
     width: 100%;
     height: auto;
 }
+.highlight-block {
+    display: flex;
+    align-items: center;
+}
+
+.highlight-block .line {
+    background-color: #2196F3;
+    opacity: .6;
+    flex: 1 0 2.083vw;
+    height: 1px;
+}
+.highlight-block p {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 32px;
+    font-size: 14px;
+    opacity: .6;
+}
+.highlight-item {
+    display: inline-flex;
+    width: 100%;
+    justify-items: center;
+}
+.highlight-text {
+    display: inline-block;
+    opacity: .8;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.gtco-heading p.small-text {
+    color: #000;
+    font-size: 16px;
+}
+#gtco-comparison {
+   background: #efefef;
+}
+
+#gtco-comparison h2{
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.image-display {
+    display: flex;
+    flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  border-radius: 7px;
+}
+
+.main-image {
+ display: flex;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.main-image img {
+  width: 100%;
+  height: auto;
+}
+
+.thumbnail-container {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.thumbnail {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnail:hover {
+  opacity: 0.7;
+}
+
 /*# sourceMappingURL=style.css.map */
