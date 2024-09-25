@@ -1,6 +1,15 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+	<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXVRB0JH42"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YXVRB0JH42');
+    </script>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Boltix Fiberglass Composite Decking - Eco-Friendly, Durable Boards in Dallas and Fort Worth</title>
@@ -88,7 +97,7 @@
 				</div> -->
 				<div class="col-md-6 col-xs-7 text-right">
 					<ul>
-						<li class="btn-cta"><a class="header-btn btn" href="#">Request A Quote</a></li>
+						<li class="btn-cta"><a class="header-btn btn contact-btn">Request A Quote</a></li>
 					</ul>
 				</div>
 			</div>
@@ -106,7 +115,7 @@
     						<br>Enjoy for <span style="color: #ffa180">30 Years</span></h1>
     						<p class="main-screen-text">Eco-friendly, crack-resistant, and maintenance-free. BOLTIX offers unmatched durability with 30-year lifespan, superior strength, and excellent resistance to water, mold, and fire.</p>
                             <p class="main-screen-text">Based in Dallas and Fort Worth, we are a proud local company committed to delivering innovative decking solutions to our Texas community and beyond. </p>
-    						<p><a href="#" class="btn btn-default">Request A Quote</a></p>
+    						<p><a class="btn btn-default contact-btn">Request A Quote</a></p>
     					</div>
     				</div>
     			</div>
@@ -321,6 +330,11 @@
 	</div>
 	<div id="gtco-features">
 		<div class="gtco-container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+			    <h2>Our Unique Advantages</h2>
+			</div>
+		</div>
 			<div class="row">
 				<div class="col-md-4 col-sm-4">
 					<div class="feature-center animate-box" data-animate-effect="fadeIn">
@@ -329,7 +343,7 @@
 						</div>
 						<h3>Local Demo Showcase</h3>
 						<p>Experience our decking boards firsthand at our local showcase area. Walk on, inspect, and envision your ideal outdoor space with our installed samples. This hands-on demo helps you make an informed decision about your decking project.</p>
-						<p class="hidden-xs"><a href="#" class="btn btn-primary">Learn More</a></p>
+						<!-- <p class="hidden-xs"><a href="#" class="btn btn-primary">Learn More</a></p> -->
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
@@ -340,7 +354,7 @@
 					</div>
 						<h3>Local Stock</h3>
 						<p>Our local warehouse is fully stocked with our top-selling decking products, guaranteeing swift availability. Skip the wait and shipping hassles—get the materials you need promptly. We're ready to supply your project without delay, right here in town.</p>
-						<p class="hidden-xs"><a href="#" class="btn btn-primary">Learn More</a></p>
+						<!-- <p class="hidden-xs"><a href="#" class="btn btn-primary">Learn More</a></p> -->
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
@@ -351,7 +365,7 @@
 					</div>
 						<h3>Installation Service</h3>
 						<p>We provide professional installation services for our local customers, turning your decking dreams into reality. We're happy to offer guidance and support to out-of-state clients, ensuring your project's success wherever you are.</p>
-						<p class="hidden-xs"><a href="#" class="btn btn-primary">Learn More</a></p>
+						<!-- <p class="hidden-xs"><a href="#" class="btn btn-primary">Learn More</a></p> -->
 					</div>
 				</div>
 			</div>
@@ -587,43 +601,46 @@
 						<div class="gtco-contact-info">
 							<h2 class="text-center">Contact Information</h2>
 							<ul>
-								<li class="address">201 E Arapaho Rd,<br>Richardson, TX 75081</li>
+								<li class="address">201 E Arapaho Rd, Richardson, TX 75081</li>
 								<li class="phone"><a href="tel://1234567920">678-999-3341</a></li>
 								<li class="email"><a href="mailto:Anna@boltixyard.com">Anna@boltixyard.com</a></li>
-								<li class="url"><a href="http://www.boltixyard.com">www.boltixyard.com</a></li>
 							</ul>
 						</div>
 					</div>
-					<form action="#">
+					<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+					<div id="form-message-success" style="display:none;">
+    					<h3>Thank you for contacting us!</h3>
+    					<p>We will get back to you soon.</p>
+					</div>
+					<form form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSflhGaEiHPAAJAO6NvEL-Ikqc45h8EE4PNthMzRVuPD5tYRbw/formResponse" method="POST" target="hidden_iframe">
 						<div class="row form-group">
-							<div class="col-md-6">
-								<label for="fname">First Name</label>
-								<input type="text" id="fname" class="form-control" placeholder="Your firstname">
+							<div class="col-md-12">
+								<input type="text" name="entry.1477049393" id="name" class="form-control" placeholder="Name" required>
 							</div>
-							<div class="col-md-6">
-								<label for="lname">Last Name</label>
-								<input type="text" id="lname" class="form-control" placeholder="Your lastname">
-							</div>
+
 						</div>
 
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label for="email">Email</label>
-								<input type="text" id="email" class="form-control" placeholder="Your email address">
+								<input type="text" name="entry.901754972" id="email" class="form-control" placeholder="Email" required>
 							</div>
 						</div>
-
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label for="subject">Subject</label>
-								<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
+								<select name="entry.1896746968" id="user-type" class="form-control form-select" required>
+									<option value="" disabled selected>I Am A</option>
+									<option value="Builder">Builder</option>
+									<option value="Contractor">Contractor</option>
+									<option value="Dealer">Dealer</option>
+									<option value="Homeowner">Homeowner</option>
+									<option value="Designer">Designer</option>
+									<option value="Other">Other</option>
+								</select>
 							</div>
 						</div>
-
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label for="message">Message</label>
-								<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Write us something"></textarea>
+							    <textarea name="entry.1701988348" name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Write us something, project size in square feet, buying time frame, or any other questions" required></textarea>
 							</div>
 						</div>
 						<div class="form-group text-center">
@@ -641,7 +658,7 @@
 	<footer id="gtco-footer" role="contentinfo">
 		<div class="gtco-container">
 			<div class="row row-pb-md">
-				<div class="col-md-4 gtco-widget">
+				<div class="col-md-12 gtco-widget">
 					<h3>About Boltix</h3>
 					<p>Our American brand unites architects, designers, and decking experts to create premium, sustainable outdoor spaces. We blend innovation and expertise to deliver beautiful, lasting solutions that enhance your living experience while respecting the environment.</p>
 				</div>

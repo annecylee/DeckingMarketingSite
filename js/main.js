@@ -179,6 +179,24 @@
     });
   };
 
+  $(document).ready(function () {
+    var scrollToForm = function () {
+      $(".contact-btn").on("click", function (event) {
+        event.preventDefault();
+        $("html, body").animate(
+          {
+            scrollTop: $("#gtco-started").offset().top,
+          },
+          500,
+          "easeInOutExpo",
+        );
+        return false;
+      });
+    };
+
+    scrollToForm();
+  });
+
   var goToTop = function () {
     $(".js-gotop").on("click", function (event) {
       event.preventDefault();
@@ -261,3 +279,27 @@ $(window).scroll(function () {
 function changeImage(src) {
   document.getElementById("mainImage").src = src;
 }
+
+$(document).ready(function () {
+  $("#contact-form").submit(function (e) {
+    e.preventDefault();
+    var form = this;
+
+    // Disable submit button to prevent multiple submissions
+    $('button[type="submit"]', form).prop("disabled", true);
+
+    // Submit the form
+    form.submit();
+
+    // Show success message and reset form after a short delay
+    setTimeout(function () {
+      $("#form-message-success").fadeIn().delay(3000).fadeOut(); // Show for 3 seconds
+
+      // Reset the form fields
+      form.reset();
+
+      // Re-enable submit button
+      $('button[type="submit"]', form).prop("disabled", false);
+    }, 1000); // Adjust this delay as needed
+  });
+});

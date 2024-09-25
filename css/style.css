@@ -21,7 +21,7 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
-    color: #828282;
+    color: #454242;
     background: #fff;
 }
 
@@ -533,6 +533,11 @@ input
     font-size: 20px;
     content: "\e9d1";
 }
+.gtco-contact-info ul li.phone a,
+.gtco-contact-info ul li.email a
+{
+    color: #fff;
+}
 .gtco-contact-info ul li.phone:before {
     font-size: 20px;
     content: "\e9f4";
@@ -589,7 +594,7 @@ form label {
 }
 #gtco-header .display-tc .btn,
 #gtco-counter .display-tc .btn,
-.gtco-cover .display-tc .btn,
+#fixed-header .gtco-cover .btn,
 .btn.header-btn-show{
     padding: 13px 25px;
     background: #e57851 !important;
@@ -599,7 +604,8 @@ form label {
 }
 #gtco-header .display-tc .btn:hover,
 #gtco-counter .display-tc .btn:hover,
-.gtco-cover .display-tc .btn:hover {
+.gtco-cover .display-tc .btn:hover,
+.gtco-nav ul li a:hover {
     background: #fff !important;
     color: #e57851;
     -webkit-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
@@ -804,7 +810,7 @@ form label {
 .gtco-heading p {
     font-size: 18px;
     line-height: 1.5;
-    color: #828282;
+    color: #454242;
 }
 
 #gtco-testimonial {
@@ -886,7 +892,6 @@ form label {
     display: inline-block;
     zoom: 1;
     display: inline;
-    height: 80px;
 }
 .gtco-tabs .gtco-tab-nav li .icon {
     font-size: 30px;
@@ -938,6 +943,9 @@ form label {
     .gtco-tabs .icon-xlg {
         font-size: 300px;
     }
+    .gtco-tabs .gtco-tab-nav li {
+        height: 80px;
+    }
 }
 @media screen and (max-width: 480px) {
     .gtco-tabs .icon-xlg {
@@ -965,6 +973,7 @@ form label {
 @media screen and (max-width: 820px) {
     #gtco-started ul {
         flex-direction: column;
+        text-align: left;
     }
 }
 
@@ -977,6 +986,15 @@ form label {
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
+}
+#gtco-started .form-select {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23FFF' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E") !important;    background-repeat: no-repeat !important;
+    background-position: calc(100% - 15px) center !important;
+    background-size: 12px !important;
+    padding-right: 40px !important;
 }
 #gtco-started .form-control::-webkit-input-placeholder {
     color: #fff;
@@ -1005,6 +1023,10 @@ form label {
     font-weight: 400;
     padding-left: 50px;
     padding-right: 50px;
+}
+#gtco-started .btn:hover
+{
+    color:#e57851;
 }
 #gtco-started .form-inline .form-group {
     width: 100% !important;
@@ -1714,6 +1736,23 @@ form label {
 
 .thumbnail:hover {
   opacity: 0.7;
+}
+
+#form-message-success {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #0f54ab;
+    border-radius: 4px;
+    margin: 0;
+    padding: 20px;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#form-message-success h3 {
+    color: #e57851;
+    font-size: 23px;
 }
 
 /*# sourceMappingURL=style.css.map */
