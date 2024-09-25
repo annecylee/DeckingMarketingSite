@@ -280,26 +280,56 @@ function changeImage(src) {
   document.getElementById("mainImage").src = src;
 }
 
-$(document).ready(function () {
-  $("#contact-form").submit(function (e) {
-    e.preventDefault();
-    var form = this;
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("contact-form")
+    .addEventListener("submit", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      try {
+        const name = encodeURIComponent(document.getElementById("name").value);
+        const email = encodeURIComponent(
+          document.getElementById("email").value,
+        );
+        const userType = encodeURIComponent(
+          document.getElementById("user-type").value,
+        );
+        const message = encodeURIComponent(
+          document.getElementById("message").value,
+        );
 
-    // Disable submit button to prevent multiple submissions
-    $('button[type="submit"]', form).prop("disabled", true);
+        const googleFormUrl = `https://docs.google.com/forms/d/e/1FAIpQLSflhGaEiHPAAJAO6NvEL-Ikqc45h8EE4PNthMzRVuPD5tYRbw/formResponse?entry.1477049393=${name}&entry.901754972=${email}&entry.1896746968=${userType}&entry.1701988348=${message}`;
 
-    // Submit the form
-    form.submit();
+        const form = document.createElement("form");
+        form.method = "POST";
+        form.action = googleFormUrl;
+        form.target = "hidden_iframe";
+        document.body.appendChild(form);
+        form.submit();
 
-    // Show success message and reset form after a short delay
-    setTimeout(function () {
-      $("#form-message-success").fadeIn().delay(3000).fadeOut(); // Show for 3 seconds
+        // Show confirmation message and reset form
+        setTimeout(() => {
+          // Show the success message
+          document.getElementById("form-message-success").style.display =
+            "block";
 
-      // Reset the form fields
-      form.reset();
+          // Scroll to the success message
+          document
+            .getElementById("form-message-success")
+            .scrollIntoView({ behavior: "smooth" });
 
-      // Re-enable submit button
-      $('button[type="submit"]', form).prop("disabled", false);
-    }, 1000); // Adjust this delay as needed
-  });
+          // Reset the form
+          this.reset();
+
+          // Hide the success message after 5 seconds
+          setTimeout(() => {
+            document.getElementById("form-message-success").style.display =
+              "none";
+          }, 5000);
+        }, 1000);
+      } catch (error) {
+        console.error("Error submitting message:", error);
+        alert("An error occurred while submitting the form. Please try again.");
+      }
+    });
 });
