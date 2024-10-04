@@ -1,26 +1,25 @@
-yaml
 name: Update Version
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Update version
-      run: |
-        VERSION=$(date +%s)
-        find . -type f -name "*.html" -exec sed -i 's/\.css?v=[0-9]*/.css?v='$VERSION'/g; s/\.js?v=[0-9]*/.js?v='$VERSION'/g' {} +
+      - name: Update version
+        run: |
+          VERSION=$(date +%s)
+          find . -type f -name "*.html" -exec sed -i 's/\.css?v=[0-9]*/.css?v='$VERSION'/g; s/\.js?v=[0-9]*/.js?v='$VERSION'/g' {} +
 
-    - name: Commit changes
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add .
-        git diff --quiet && git diff --staged --quiet || git commit -am "Update version to $VERSION"
-        git push
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git diff --quiet && git diff --staged --quiet || git commit -am "Update version to $VERSION"
+          git push
