@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div id="gtco-blog" class="gtco-section">
+    <div class="gtco-container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+                <article class="post">
+                    <h1 class="post-title">{{ page.title }}</h1>
+                    <p class="post-meta">
+                        {{ page.date | date: "%B %-d, %Y" }}
+                    </p>
+                    <div class="post-content text-left">{{ content }}</div>
+                    <!-- Add this block for the "Back to Blog" link -->
+                    <div class="back-to-blog">
+                        <a
+                            href="{{ '/blog.html' | relative_url }}"
+                            class="btn btn-primary"
+                            >← Back to Blog</a
+                        >
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>

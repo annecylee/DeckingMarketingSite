@@ -264,15 +264,19 @@
 })();
 
 $(window).scroll(function () {
-  var containerHeight = $(".gtco-cover").outerHeight();
+  var containerHeight = $(".gtco-cover").length
+    ? $(".gtco-cover").outerHeight()
+    : 0;
   var scrollTop = $(window).scrollTop();
 
   if (scrollTop > containerHeight) {
     $(".gtco-nav").attr("id", "fixed-header");
     $(".header-btn").addClass("header-btn-show");
+    $("#menu-container").addClass("dark-text");
   } else {
     $(".gtco-nav").removeAttr("id", "fixed-header");
     $(".header-btn").removeClass("header-btn-show");
+    $("#menu-container").addClass("dark-text");
   }
 });
 

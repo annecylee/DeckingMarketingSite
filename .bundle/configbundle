@@ -1,0 +1,1 @@
+BUNDLE_SPECIFIC_PLATFORM: true _2.3.27_ config set --local path vendor/bundle

@@ -1,0 +1,168 @@
+#gtco-header.gtco-cover.sub-page-cover {
+    height: 200px;
+    background-image: url(../images/Teak-Composite-Deck-Board-Tiny-Home-07.jpg);
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+.blog-post-container {
+    height: 500px; /* Adjust as needed */
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-post-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Blog image styles */
+.blog-image-container {
+    height: 200px; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.blog-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-image:hover {
+    transform: scale(1.05);
+}
+
+/* Blog text styles */
+.blog-text {
+    height: calc(
+        100% - 200px
+    ); /* Subtracts image height from container height */
+    overflow: hidden;
+    padding: 15px;
+}
+
+.blog-text h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.blog-text .posted_on {
+    display: block;
+    margin-bottom: 10px;
+    color: #777;
+}
+
+/* Header styles */
+.blog-header {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.blog-header h1 {
+    margin: 0;
+    color: #333;
+}
+
+/* Footer styles */
+.blog-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.blog-footer p {
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .blog-post-container {
+        height: auto;
+    }
+
+    .blog-text {
+        height: auto;
+    }
+}
+
+#gtco-blog.gtco-section {
+    padding: 7em 0;
+    clear: both;
+}
+
+/* Blog post container styles */
+.blog-post-container {
+    margin-bottom: 30px;
+}
+
+/* Blog image styles */
+.blog-image-container {
+    height: 200px; /* Adjust as needed */
+    overflow: hidden;
+    border: 5px double #858080;
+    margin-bottom: 30px;
+}
+
+.blog-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-image:hover {
+    transform: scale(1.05);
+}
+
+/* Blog text styles */
+.fh5co-blog {
+    margin-bottom: 30px;
+}
+
+.fh5co-blog .blog-text {
+    margin-top: 20px;
+}
+
+.fh5co-blog .blog-text h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.fh5co-blog .blog-text h3 a {
+    color: #000;
+}
+
+.fh5co-blog .blog-text .posted_on {
+    display: inline-block;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.fh5co-blog .blog-text p {
+    margin-bottom: 20px;
+}
+
+/* Header styles */
+.blog-header {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.blog-header h1 {
+    margin: 0;
+    color: #333;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    #gtco-blog.gtco-section {
+        padding: 3em 0;
+    }
+}
