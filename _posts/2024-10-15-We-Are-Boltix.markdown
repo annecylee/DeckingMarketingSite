@@ -3,11 +3,11 @@ layout: post
 title:  "We Are Boltix"
 date:   2024-10-15 10:02:17 -0500
 categories: [Company Culture, Team Spotlight]
-image: /images/Deck-Board-Gallery.PNG
+image: /images/Deck-Board-Gallery.png
 weather: Sunny
 ---
 
-<img src="{{ '/images/Deck-Board-Gallery.PNG' | relative_url }}" alt="Boltix Decking Installation" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 20px auto;">
+<img src="{{ '/images/Deck-Board-Gallery.png' | relative_url }}" alt="Boltix Decking Installation" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 20px auto;">
 
 Have you ever wondered what makes a great outdoor space truly exceptional? At Boltix, we believe it's the perfect blend of passion, expertise, and innovation. Today, we're pulling back the curtain to introduce you to the heart of our brand: our incredible team.
 
