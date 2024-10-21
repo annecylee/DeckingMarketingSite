@@ -43,11 +43,6 @@
     padding: 15px;
 }
 
-.blog-text h3 {
-    margin-top: 0;
-    font-size: 1.2em;
-}
-
 .blog-text .posted_on {
     display: block;
     margin-bottom: 10px;
@@ -128,9 +123,10 @@
 }
 
 .fh5co-blog .blog-text h3 {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 20px;
     line-height: 1.5;
+    margin-top: 0;
 }
 
 .fh5co-blog .blog-text h3 a {

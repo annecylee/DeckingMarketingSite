@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Thanks for Your Trust"
+title:  "Our Texas Customer's New Deck"
 date:   2024-10-20 12:02:17 -0500
 categories: [Company Culture, Team Spotlight]
 image: /images/Boltix-customer-self-pickup.JPG
@@ -32,7 +32,3 @@ So, why did they choose our decking? Here's what sealed the deal:
 It's not every day that customers drive long distances for building materials. But for a deck that will last for years and enhance their new home? That's a journey worth taking.
 
 We're excited to see the transformation of their space and proud to be part of their home improvement story. Stay tuned for before-and-after photos!
-
----
-
-Have you gone the extra mile for quality home improvements? Share your stories in the comments below!

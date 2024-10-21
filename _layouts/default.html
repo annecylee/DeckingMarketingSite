@@ -16,9 +16,7 @@
         </script>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>
-            {% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}
-        </title>
+        <title>Boltix Blog</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
             name="description"
@@ -28,6 +26,16 @@
         <meta name="author" content="{{ site.author }}" />
 
         <!-- CSS files -->
+        <link
+            rel="icon"
+            href="{{ '/images/favicon.ico' | relative_url }}"
+            type="image/x-icon"
+        />
+        <link
+            rel="shortcut icon"
+            href="{{ '/images/favicon.ico' | relative_url }}"
+            type="image/x-icon"
+        />
         <link rel="stylesheet" href="{{ '/css/animate.css' | relative_url }}" />
         <link rel="stylesheet" href="{{ '/css/icomoon.css' | relative_url }}" />
         <link
