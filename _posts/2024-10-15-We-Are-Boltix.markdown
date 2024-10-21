@@ -5,6 +5,7 @@ date:   2024-10-15 10:02:17 -0500
 categories: [Company Culture, Team Spotlight]
 image: /images/Deck-Board-Gallery.png
 weather: Sunny
+keywords: decking boards, composite decking boards, Dalls, Fort Worth, DFW, Texas, water-proof, heat-resistant, weather-proof, long-lasting, Maintenance-free
 ---
 
 <img src="{{ '/images/Deck-Board-Gallery.png' | relative_url }}" alt="Boltix Decking Installation" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 20px auto;">

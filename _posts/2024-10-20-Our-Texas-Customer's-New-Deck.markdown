@@ -5,6 +5,7 @@ date:   2024-10-20 12:02:17 -0500
 categories: [Company Culture, Team Spotlight]
 image: /images/Boltix-customer-self-pickup.JPG
 weather: Sunny
+keywords: decking boards, composite decking boards, Dalls, Fort Worth, DFW, Texas, water-proof, heat-resistant, weather-proof, long-lasting, Maintenance-free
 
 ---
 
@@ -12,7 +13,7 @@ weather: Sunny
 
 # A New Deck for a New Home: Our Customer's Journey to Quality
 
-Ever wonder how far people will go for quality? Today, we had a customer who drove his pickup miles to our warehouse, eager to start their home renovation journey. Their mission? To pick up 1,000 square feet of our premium grey fiberglass composite decking.
+Ever wonder how far people will go for quality? Today, we had a customer who drove his pickup miles to our warehouse, to pick up 1,000 square feet of our premium grey fiberglass composite decking.
 
 ## Out with the Old, In with the New
 
