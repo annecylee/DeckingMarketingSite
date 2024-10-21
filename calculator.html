@@ -1,0 +1,122 @@
+---
+layout: default
+title: Boltix Fiberglass Composite Decking Board Calculator
+description: Calculate the number of decking boards you need for your project with Boltix's easy-to-use calculator.
+---
+
+<div class="gtco-section">
+    <div class="gtco-container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                <h2>Decking Board Calculator</h2>
+                <p>
+                    Estimate the number of decking boards you'll need for your
+                    project.
+                </p>
+            </div>
+        </div>
+        <div id="prompt" class="mt-4">
+            <p>
+                Enter your deck area, choose layout complexity, then click
+                'Calculate'.
+            </p>
+            <p class="small-text">
+                Boltix Decking Board Size: 9’6″L x 5.75"W x 1"H
+            </p>
+        </div>
+        <div id="result" class="mt-4" style="display: none">
+            <p>
+                You will need approximately
+                <span id="boardCount"></span>
+                Boltix decking boards.
+            </p>
+            <p class="small-text">
+                Including a <span id="wastePercentage"></span>% allowance for
+                waste material based on your chosen layout complexity.
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <form id="calculatorForm">
+                    <div class="form-group">
+                        <label for="deckArea">Deck Area (square feet):</label>
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="deckArea"
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label>Layout Complexity:</label>
+                        <div class="radio">
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="layoutComplexity"
+                                    value="simple"
+                                    checked
+                                />
+                                Simple Layout (straight boards, minimal cutting)
+                                - 5% waste
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="layoutComplexity"
+                                    value="complex"
+                                />
+                                Complex Layout (diagonal, custom cuts) - 10%
+                                waste
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Calculate
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document
+        .getElementById("calculatorForm")
+        .addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            var deckArea = parseFloat(
+                document.getElementById("deckArea").value,
+            );
+            var layoutComplexity = document.querySelector(
+                'input[name="layoutComplexity"]:checked',
+            ).value;
+
+            if (isNaN(deckArea) || deckArea <= 0) {
+                alert(
+                    "Please enter a valid positive number for the deck area.",
+                );
+                return;
+            }
+
+            var boardArea = 4.5; // Area of one decking board in square feet
+            var wasteFactorPercentage = layoutComplexity === "simple" ? 5 : 10;
+
+            // Calculate number of boards needed
+            var boardCount = Math.ceil(
+                (deckArea / boardArea) * (1 + wasteFactorPercentage / 100),
+            );
+
+            // Update result elements
+            document.getElementById("boardCount").textContent = boardCount;
+            document.getElementById("wastePercentage").textContent =
+                wasteFactorPercentage;
+
+            // Hide prompt and show result
+            document.getElementById("prompt").style.display = "none";
+            document.getElementById("result").style.display = "flex";
+        });
+</script>

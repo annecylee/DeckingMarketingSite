@@ -7,6 +7,9 @@
             <a href="{{ '/index.html' | relative_url }}">Home</a>
         </li>
         <li><a href="{{ '/blog.html' | relative_url }}">Blog</a></li>
+        <li>
+            <a href="{{ '/calculator.html' | relative_url }}">Calculator</a>
+        </li>
     </ul>
 </div>
 <nav class="gtco-nav" role="navigation">
@@ -27,8 +30,11 @@
                     <li>
                         <a href="{{ '/' | relative_url }}">Home</a>
                     </li>
-                    <li class="active">
+                    <li {% if page.url contains 'blog' %}class="active"{% endif %}>
                         <a href="{{ '/blog.html' | relative_url }}">Blog</a>
+                    </li>
+                    <li {% if page.url contains 'calculator' %}class="active"{% endif %}>
+                        <a href="{{ '/calculator.html' | relative_url }}">Calculator</a>
                     </li>
                 </ul>
             </div>
